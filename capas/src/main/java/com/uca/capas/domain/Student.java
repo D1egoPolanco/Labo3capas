@@ -3,39 +3,39 @@ package com.uca.capas.domain;
 public class Student {
 
 	private String nombre;
-	private String apellido;
-	private String fentrada;
+	private String apellidos;
+	private String fEntrada;
 	private String carrera;
-	private Boolean estado;
+	private boolean estado;
 	
-	
-	
-	
-	public Student(String nombre, String apellido, String fentrada, String carrera, Boolean estado) {
+	public Student(String nombre, String apellido, String fEntrada, String carrera, boolean estado) {
 		super();
 		this.nombre = nombre;
-		this.apellido = apellido;
-		this.fentrada = fentrada;
+		this.apellidos = apellido;
+		this.fEntrada = fEntrada;
 		this.carrera = carrera;
 		this.estado = estado;
 	}
+	
+	public Student() {}
+
 	public String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getApellido() {
-		return apellido;
+	public String getApellidos() {
+		return apellidos;
 	}
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
 	}
-	public String getFentrada() {
-		return fentrada;
+	public String getfEntrada() {
+		return fEntrada;
 	}
-	public void setFentrada(String fentrada) {
-		this.fentrada = fentrada;
+	public void setfEntrada(String fEntrada) {
+		this.fEntrada = fEntrada;
 	}
 	public String getCarrera() {
 		return carrera;
@@ -43,14 +43,15 @@ public class Student {
 	public void setCarrera(String carrera) {
 		this.carrera = carrera;
 	}
-	public Boolean getEstado() {
+	public boolean isEstado() {
 		return estado;
 	}
-	public void setEstado(Boolean estado) {
+	public void setEstado(boolean estado) {
 		this.estado = estado;
 	}
-	
 	public String delegateEstado() {
-		return estado ? "Activo": "Inactivo";
+		return this.estado? "Activo": "Inactivo";
 	}
+	
+	
 }
