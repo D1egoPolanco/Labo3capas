@@ -13,11 +13,11 @@
 <th>Carrera</th>
 </thead>
 
-<th:block th:each="estudiante, row: $(studentlist)">
+<th:block th:each="estudiante, row: ${studentList}">
 <tr>
-<th th:text="$(estudiante.nombre)"/>
-<th th:text="$(estudiante.apellido)"/>
-<th th:text="$(estudiante.carrera)"/>
+<th th:text="${estudiante.nombre}"/>
+<th th:text="${estudiante.apellidos}"/>
+<th th:text="${estudiante.carrera}"/>
 </tr>
 </th:block>
 </table>
